@@ -1,27 +1,27 @@
 const recursos = [
     {
         titulo: "Agenda Coaching Nro. 1 17/07",
-        descripcion: "Guarda, pasar y pedir gigas; novedades y mas",
+        descripcion: "Guarda, pasar y pedir gigas; novedades y mas.",
         categoria: "AGENDA COACHING",
         archivo: "archivos/recurso_510.pdf"
     },
     {
         titulo: "Agenda Coaching Nro. 2 24/07",
-        descripcion: "Un ejemplo de cómo realizar llamadas efectivas.",
+        descripcion: "Info prepagos, cierre \"no llame\" y evitacion de rechazos.",
         categoria: "AGENDA COACHING",
-        archivo: "LlamadaEjemplo.pdf"
+        archivo: "archivos/recurso_511.pdf"
     },
     {
         titulo: "Agenda Coaching Nro. 3 31/07",
-        descripcion: "como usar mitrol.",
+        descripcion: "4gb de regalo y comparativa entre empresas.",
         categoria: "AGENDA COACHING",
-        archivo: "LlamadaEjemplo.pdf"
+        archivo: "archivos/recurso_514.pdf"
     },
     {
         titulo: "Agenda Coaching Nro. 4 7/08",
-        descripcion: "Un ejemplo de cómo realizar llamadas efectivas.",
+        descripcion: "Equipos a contrafactura, portas cuit y fibra individuos.",
         categoria: "AGENDA COACHING",
-        archivo: "LlamadaEjemplo.pdf"
+        archivo: "archivos/recurso_516.pdf"
     },
     {
         titulo: "Llamada Ejemplo",
@@ -39,6 +39,18 @@ const recursos = [
         titulo: "Llamada Ejemplo",
         descripcion: "Un ejemplo de cómo realizar llamadas efectivas.",
         categoria: "LLAMADAS",
+        archivo: "LlamadaEjemplo.pdf"
+    },
+    {
+        titulo: "Speech de prueba",
+        descripcion: "Una prueba.",
+        categoria: "SPEECH",
+        archivo: "LlamadaEjemplo.pdf"
+    },
+    {
+        titulo: "Speech de prueba",
+        descripcion: "Una prueba.",
+        categoria: "SPEECH",
         archivo: "LlamadaEjemplo.pdf"
     },
     // Agrega más recursos aquí

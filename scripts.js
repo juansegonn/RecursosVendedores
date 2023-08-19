@@ -27,31 +27,31 @@ const recursos = [
         titulo: "Taller de rebates",
         descripcion: "Guia de como rebatir siguiendo el formato CRP.",
         categoria: "TALLERES",
-        archivo: "recurso_515.pdf"
+        archivo: "archivos/recurso_515.pdf"
     },
     {
         titulo: "Calculadora negocio porta",
         descripcion: "Explicacion de como utilizar la calculadora cuit correctamente.",
         categoria: "CUIT",
-        archivo: "recurso_530.mp4"
+        archivo: "archivos/recurso_530.mp4"
     },
     {
         titulo: "Links para clientes con CUIT",
         descripcion: "Enlaces para obtener IIBB y otros links importantes.",
         categoria: "CUIT",
-        archivo: "recurso_495.docx"
+        archivo: "archivos/recurso_495.docx"
     },
     {
         titulo: "Taller para fibra cuit/dni",
         descripcion: "Guia rapida de como cargar la fibra.",
         categoria: "CUIT",
-        archivo: "recurso_512.pdf"
+        archivo: "archivos/recurso_512.pdf"
     },
     {
         titulo: "Taller porta CUIT",
         descripcion: "Guia detallada de como y cuando portar una linea con CUIT.",
         categoria: "CUIT",
-        archivo: "LlamadaEjemplo.pdf"
+        archivo: "archivos/LlamadaEjemplo.pdf"
     },
 ];
 

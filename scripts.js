@@ -57,9 +57,7 @@ const recursos = [
 
 document.addEventListener("DOMContentLoaded", () => {
     const categoriesList = document.querySelector('.categories-list');
-    const searchInputs = document.querySelectorAll('.searchInput');
     const resourcesList = document.querySelector('.resources-list');
-
     const categorias = [...new Set(recursos.map(recurso => recurso.categoria))];
 
     categorias.forEach(categoria => {
@@ -81,8 +79,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const main = document.querySelector("main");
-    main.appendChild(resourcesList);
+    const resourcesContainer = document.querySelector('.resources-list');
+    const errorMessage = document.createElement('p');
+    errorMessage.className = 'search-error-message';
+    errorMessage.textContent = '🔍 No se encontraron coincidencias.';
+    resourcesContainer.appendChild(errorMessage);
+
+    document.addEventListener("keyup", e => {
+        if (e.target.matches("#buscador")) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            const categoriesList = document.querySelector('.categories-list');
+            categoriesList.style.display = searchTerm === '' ? 'flex' : 'none';
+
+            const resourcesList = document.querySelector('.resources-list');
+            const panels = resourcesList.querySelectorAll('.panel');
+            resourcesList.style.display = searchTerm === '' ? 'none' : 'block';
+
+            let hasMatchingResources = false;
+            
+            panels.forEach(panel => {
+                const titulo = panel.querySelector('h3').textContent.toLowerCase();
+                const descripcion = panel.querySelector('.descripcion').textContent.toLowerCase();
+
+                if (titulo.includes(searchTerm) || descripcion.includes(searchTerm)) {
+                    panel.style.display = 'flex';
+                    hasMatchingResources = true;
+                } else {
+                    panel.style.display = 'none';
+                }
+            });
+
+            if (!hasMatchingResources) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        }
+    });
 });
 
 
@@ -154,29 +188,4 @@ function createDownloadLink(url) {
     return link;
 }
 
-document.addEventListener("keyup", e => {
-    if (e.target.matches("#buscador")) {
-        const searchTerm = e.target.value.toLowerCase();
-        
-        // Ocultar la lista de categorías si se realiza una búsqueda
-        const categoriesList = document.querySelector('.categories-list');
-        categoriesList.style.display = searchTerm === '' ? 'flex' : 'none';
-
-        // Mostrar la lista de recursos solo si hay coincidencias en la búsqueda
-        const resourcesList = document.querySelector('.resources-list');
-        const panels = resourcesList.querySelectorAll('.panel');
-        resourcesList.style.display = searchTerm === '' ? 'none' : 'block';
-        
-        panels.forEach(panel => {
-            const titulo = panel.querySelector('h3').textContent.toLowerCase();
-            const descripcion = panel.querySelector('.descripcion').textContent.toLowerCase();
-
-            if (titulo.includes(searchTerm) || descripcion.includes(searchTerm)) {
-                panel.style.display = 'flex';
-            } else {
-                panel.style.display = 'none';
-            }
-        });
-    }
-});
 

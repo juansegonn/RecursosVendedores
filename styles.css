@@ -255,3 +255,22 @@ main {
     padding: 10px; 
     border-radius: 5px; 
 }
+
+@media (max-width: 768px) {
+    .category {
+        width: 90%;
+    }
+
+    .resources-list {
+        width: 90%;
+    }
+
+    .categories-list,
+    .resources-list {
+        padding: 5px;
+    }
+
+    .searchInput{
+        width: 90%;
+    }
+}
